@@ -8,3 +8,6 @@ int main()
     printf("a = %d, b = %d\n", *pa, *pb);
     return 0;
 }
+
+
+// Ler o livro: Treinamento da Linguagem C
