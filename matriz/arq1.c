@@ -8,7 +8,8 @@ int main()
     {
         for (c = 0; c < 2; c++)
         {
-           scanf("%d", &mat[l][c]);
+            printf("Digite o valor da linha %d e coluna %d: ", l, c);
+            scanf("%d", &mat[l][c]);
         }
     }
 
