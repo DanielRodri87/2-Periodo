@@ -1,17 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include <conio.h>
 int main()
 {
-    int saida = 26;
     char c;
-    while (saida!=27)
+    while ((c = getche()) != 27)
     {
-        scanf("%c", &c);
-        saida++;
+        if (c >= 'a' && c <= 'z')
+        {
+            c -= 32;
+        }
+        printf(" %c\n", c);
     }
-    // pegar o valor na tabela ASCII
-    printf("Saida: %c\n", (char)c);
     return 0;
 }
