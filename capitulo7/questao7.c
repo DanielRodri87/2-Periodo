@@ -4,9 +4,7 @@ int main()
 {
     int mat[tam];
     for (int i = 0; i <= tam; i++)
-    {
-        scanf("%d", &mat[i]);
-    }
+    scanf("%d", &mat[i]);
 
     for (int i = 0; i < tam; i++)
     {

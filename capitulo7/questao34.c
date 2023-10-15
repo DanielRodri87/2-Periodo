@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 
-void minuscula(char *str)
+void inverter(char *str)
 {
     int i = 0;
-    int max = strlen(str);
-    for (i = 0; i < max; i++)
+    int j = strlen(str) - 1;
+    char aux;
+    while (i < j)
     {
-        if (str[i] >= 'A' && str[i] <= 'Z')
-        {
-            str[i] += 32;
-        }
+        aux = str[i];
+        str[i] = str[j];
+        str[j] = aux;
+        i++;
+        j--;
     }
 }
 
@@ -19,7 +21,7 @@ int main()
     char palavra[100];
     scanf("%s", palavra);
     printf("Antes: %s\n", palavra);
-    minuscula(palavra);
+    inverter(palavra);
     printf("Depois: %s\n", palavra);
     return 0;
 }
