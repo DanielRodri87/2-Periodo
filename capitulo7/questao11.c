@@ -2,13 +2,11 @@
 
 int main()
 {
-    int mat[8];
-    mat[9] = 10;
-
-    for (int i = 0; i < 8; i++)
+    int mat[4] = {1, 2, 3, 4};
+    mat[7] = 10;
+    for (int i = 0; i < 4; i++)
     {
-        printf("%d ", mat[i]);
+        printf("%d\n", mat[i]);
     }
-
     return 0;
 }
