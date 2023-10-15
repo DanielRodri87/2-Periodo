@@ -22,4 +22,5 @@ int main()
     minuscula(palavra);
     printf("Depois: %s\n", palavra);
     return 0;
+    
 }
