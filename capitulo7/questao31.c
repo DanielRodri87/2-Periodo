@@ -15,8 +15,7 @@ int main() {
     const char *str;
     char ch;
 
-    scanf("%s", str);
-    scanf(" %c", &ch);
+    scanf("%s %c", str, &ch);
 
     int id = indiceCH(str, ch);
 

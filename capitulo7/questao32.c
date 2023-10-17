@@ -17,8 +17,8 @@ int strcomp(const char *str1, const char *str2) {
 }
 
 int main() {
-    const char *str1 = "Exemplo";
-    const char *str2 = "exEMPLe";
+    char *str1 = "Teste";
+    char *str2 = "tessTe";
 
     int saida = strcomp(str1, str2);
 
