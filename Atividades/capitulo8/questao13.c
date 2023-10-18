@@ -38,11 +38,11 @@ enum Rio {
 
 
 
-int main()
-{
-    Frutas Arvore = Figo
-    Frutas Feirante = Uva;
-    printf("%d\n", Pera);
+// int main()
+// {
+//     Frutas Arvore = Figo
+//     Frutas Feirante = Uva;
+//     printf("%d\n", Pera);
 
-    return 0;
-}
+//     return 0;
+// }

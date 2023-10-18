@@ -10,7 +10,7 @@ int main()
 {
     struct funcionario f1;
     int i, j;
-    strcpy(f1.nome, "Iago");
+    strcpy(f1.nome, "Daniel");
     f1.idade = 20;
     for (i = 0; i < 3; i++)
     {
@@ -23,6 +23,7 @@ int main()
     for (i = 0; i < 3; i++)
     {
         printf("%.2f ", f1.notas[i]);
+        
     }
     return 0;
 }
