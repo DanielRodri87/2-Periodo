@@ -1,8 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
+struct livro {
+    char titulo;
+    char autor;
+    int numero_registro;
 
-    return 0;
+    union {
+        float preco;
+        struct {
+            int reais;
+            int centavos;
+        };
+    };
 };
-
