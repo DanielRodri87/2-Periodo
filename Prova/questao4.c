@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-int main()
+int x[5] = {1, 2, 3, 4, 5}, y[5] = {5, 4, 3, 2, 1}, i, aux[5];
+
+void trocar(int aux[], int x[], int y[])
 {
-    int x[5] = {1, 2, 3, 4, 5}, y[5] = {5, 4, 3, 2, 1}, i, aux[5];
     for (i = 0; i < 5; i++)
     {
         aux[i] = x[i];
@@ -11,6 +12,11 @@ int main()
 
         
     }
+}
+
+int main()
+{
+    trocar(aux, x, y);
     printf("Valores de X: \n");
     for (i = 0; i <5; i++)
     {
