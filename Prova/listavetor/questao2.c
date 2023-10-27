@@ -10,7 +10,7 @@ int main()
         printf("Digite o valor do vetor[%d]: ", i);
         scanf("%f", &vetor[i]);
     }
-    printf("Digite o codigo:\n1 - Ordem Direta\n2 - Ordem Inversa\n");
+    printf("Digite o codigo:\n1 - Ordem Direta\n2 - Ordem Inversa\n0 - Sair\n");
     scanf("%d", &codigo);
     switch (codigo)
     {
@@ -25,6 +25,9 @@ int main()
         {
             printf("vetor[%d] = %.2f\n", i, vetor[i]);
         }
+        break;
+    case 0:
+        printf("Saindo...\n");
         break;
     default:
         printf("Codigo invalido\n");
