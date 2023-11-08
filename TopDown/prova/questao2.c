@@ -24,6 +24,7 @@ void verificarValoresVetores(int v[], int v1[], int tamanho1, int tamanho2){
         }
     }
 
+
     printf("\nO numero total de valores iguais nos dois vetores eh: %d\n", cont);
 }
 
