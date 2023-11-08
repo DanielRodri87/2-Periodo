@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+// Essa coisa vai virar outra atividade: Alan quer que compare, passos:
+
+// Variavel cont define o tamanho do vetor:
+// Pego os números repetidos e jogo em outro vetor apenas com os valores repeditos
+// Quando chegar em verificar vetor, devo retornar o novo vetor com valores repeditos.
 void verificarValoresVetores(int v[], int v1[], int tamanho1, int tamanho2){
 
     int i, j, cont = 0;
