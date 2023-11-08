@@ -476,7 +476,7 @@
 
 32. A macro a seguir é correta?
 
-	#define TROCA(a, b){int t; t = a; b = t;}
+	#define TROCA(a, b){int t; t = a; b = t}
 
 	Resposta: Não! A parte de pré-processamento faz, a grosso modo, uma sub
 
@@ -500,6 +500,7 @@
 35. Escreva uma macro que tenha valor 1 se o seu argumento for um caractere entre 0 e 9, o valor 0 se nao for .
 
 36. Escreva uma macro que converta um dígito ASCII entre 0 e 9 a um valor numérico entre 0 e 9.
+	#define CHAR_TO_DIGIT(c) ((c) - '0')
 
 37. O código abaixo é correto para calcular o custo de um pacote postal? Tal custo é igual a uma taxa fixa de vezes a soma da altura, largura e comprimento do pacote:
 
