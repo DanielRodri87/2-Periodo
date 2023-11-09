@@ -5,53 +5,73 @@ void preencher(int v[], int tam)
     int i;
     for (i = 0; i < tam; i++)
     {
-        printf("Digite o valor do elemento:");
+        printf("Digite o valor do elemento: ");
         scanf("%d", &v[i]);
     }
 }
 
-void buscasequencial(int v[], int tam, int valor)
+int buscasequencial(int v[], int tam, int valor)
 {
-    int i, encontrou;
-    for (i=0; i < tam; i++)
+    int i;
+    for (i = 0; i < tam; i++)
     {
         if (v[i] == valor)
         {
-            encontrou = i;
-            break;
-        } else
-        {
-            encontrou = -1;
+            return i; 
         }
     }
-    if (encontrou >= 0)
+
+    return -1; 
+}
+
+int ordenar_crescente(int v[], int tam)
+{
+    int i, j, aux;
+    for (i = 0; i < tam; i++)
     {
-        printf("Valor encontrado na posição: %d", encontrou);
-    } else
-    {
-        printf("Valor não encontrado");
+        for (j = i + 1; j < tam; j++)
+        {
+            if (v[i] > v[j])
+            {
+                aux = v[i];
+                v[i] = v[j];
+                v[j] = aux;
+            }
+        }
     }
 }
 
 int main()
 {
     int val;
-    while (1)
-    {
 
-        int t;
-        printf("Digite o tamanho do vetor: ");
-        scanf("%d", &t);
-        int vetor[t];
-        preencher(vetor, t);
-        printf("Digite o valor que você deseja buscar: ");
-        scanf("%d", &val);
-        buscasequencial(vetor, t, val);
-        break;
-    
-    
-    return 0;
-        
+    int t;
+    printf("Digite o tamanho do vetor: ");
+    scanf("%d", &t);
+
+    int vetor[t];
+    preencher(vetor, t);
+
+    printf("Digite o valor que você deseja buscar: ");
+    scanf("%d", &val);
+
+    int resultado = buscasequencial(vetor, t, val);
+
+    if (resultado != -1)
+    {
+        printf("Encontrou na posição: %d\n", resultado);
     }
-    
+    else
+    {
+        printf("Valor não encontrado\n");
+    }
+
+    ordenar_crescente(vetor, t);
+    for (int i = 0; i < t; i++)
+    {
+        printf("%d ", vetor[i]);
+    }
+
+
+    return 0;
 }
