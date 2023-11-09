@@ -497,7 +497,20 @@
 
 34. Escreva uma macro que encontre o maior entre seus tres numeros.
 
+	#define ENCONTRAR_MAIOR(num1, num2, num3) \
+    ({                                     \
+        int _maior = (num1);                \
+        if ((num2) > _maior)                \
+            _maior = (num2);                \
+        if ((num3) > _maior)                \
+            _maior = (num3);                \
+        _maior;                             \
+    })
+
 35. Escreva uma macro que tenha valor 1 se o seu argumento for um caractere entre 0 e 9, o valor 0 se nao for .
+
+#define E_DIGITO_ENTRE_0_E_9(caractere) ((caractere) >= '0' && (caractere) <= '9' ? 1 : 0)
+
 
 36. Escreva uma macro que converta um dígito ASCII entre 0 e 9 a um valor numérico entre 0 e 9.
 	#define CHAR_TO_DIGIT(c) ((c) - '0')
