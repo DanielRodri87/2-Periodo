@@ -4,6 +4,7 @@
 void pascoa() {
     int ano;
 
+
     printf("Digite o ano em que deseja saber quando sera a pascoa: ");
     scanf("%4d", &ano);
 
