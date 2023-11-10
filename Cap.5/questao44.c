@@ -27,7 +27,7 @@ void pascoa() {
     int mes = (H + L - 7 * M + 114) / 31;
 
     // Soldado
-    printf("\nA pascoa caira em %02d/%02d\n\n", mes, dia);
+    printf("\nA pascoa caira em %02d/%02d\n\n", dia, mes);
 }
 
 int main() {

@@ -1,4 +1,4 @@
-	#include <stdio.h>
+#include <stdio.h>
 
 int potencia(int i, int j) {
     if (j == 0) {
