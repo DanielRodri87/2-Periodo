@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define t 3
+#define t 100
 
 float maiorA(float v[t])
 {
