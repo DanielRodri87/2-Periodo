@@ -1,6 +1,6 @@
 #include <stdio.h>
-int n = 100;
-float levetor(float x1[n]){
+int n = 3;
+void levetor(float x1[n]){
    int i=0;
    for ( i = 0; i < n; i++)
    {
@@ -8,7 +8,7 @@ float levetor(float x1[n]){
    }
    
 }
-int x = 100;
+int x = 3;
 float maiorelemento(float zelda[x]){
     int i=0;
     float malem=0;
@@ -22,7 +22,7 @@ float maiorelemento(float zelda[x]){
     }
    return malem;
 }
-int y = 100;
+int y = 3;
 float menorelemento(float omega[y]){
     int i= 0;
     float melem= y;
@@ -36,7 +36,7 @@ float menorelemento(float omega[y]){
     }
         return melem;
 } 
-int z=100;
+int z=3;
 float somadoselementos(float alfa[z]){
     float soma;
     int i=0;
@@ -47,7 +47,7 @@ float somadoselementos(float alfa[z]){
     return soma;
 } 
 
-int k=100;
+int k=3;
  float mediavetor(float beta[k]){
     float soma, media;
     int i=0;
@@ -55,11 +55,11 @@ int k=100;
     {
         soma = soma + beta[i];
     }
-       media = soma / 100;
+       media = soma / 3;
       return media;
     
 } 
-int j=100;
+int j=3;
 float somarvetores(float x[j], float r[j], float d[j]){
     int i=0;
     float soma=0;
@@ -72,7 +72,7 @@ float somarvetores(float x[j], float r[j], float d[j]){
     
 }
  
- int u=100;
+ int u=3;
  float escrevervetor(float m[u]){
     int i=0;
     for ( i = 0; i < u; i++)
@@ -83,7 +83,7 @@ float somarvetores(float x[j], float r[j], float d[j]){
     
  }
 int main(){
-    float vetorA[100], vetorB[100], vetorC[100];
+    float vetorA[3], vetorB[3], vetorC[3];
     char op;
 
     printf("Digite a opção desejada:\nA-Maior elemento do Vetor A\nB-Menor elemento do Vetor B\nC- A soma e a média dos elementos do Vetor A\nD- A soma e média dos elementos do Vetor B\nE- Montar o Vetor C\nF-Escrever os elementos do Vetor A\nG-Escrever os elementos do vetor B\nH-Sair do Programa!: ");
@@ -93,7 +93,7 @@ int main(){
     {
     case 'A':
         levetor(vetorA);
-       maiorelemento(vetorA);
+        maiorelemento(vetorA);
         break;
     case 'B': 
         levetor(vetorB);
@@ -105,6 +105,7 @@ int main(){
         mediavetor(vetorA);
         break; 
     case 'D': 
+
         levetor(vetorB);
         somadoselementos(vetorB);
         mediavetor(vetorB);
