@@ -2,24 +2,25 @@
 
 int tam, i, saida;
 
-int maior_elemento(int vet[], int tam)
+int maior_elemento(int *vet, int tam)
 {
-    int maior = vet[0];
+    int maior = *vet;  
     for (int i = 1; i < tam; i++)
     {
-        if (maior < vet[i])
+        if (maior < *(vet + i))
         {
-            maior = vet[i];
+            maior = *(vet + i);
         }
     }
     return maior;
 }
 
+
 int main()
 {
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &tam);
-    
+
     int vetor[tam];
 
     for (i = 0; i < tam; i++)
@@ -30,6 +31,6 @@ int main()
 
     saida = maior_elemento(vetor, tam);
     printf("O maior elemento é: %d\n", saida);
-    
+
     return 0;
 }
