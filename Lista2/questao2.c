@@ -32,10 +32,7 @@ void digitarNotas(struct Aluno alunos[], int numAlunos) {
             soma += alunos[i].notas[j];
         }
         alunos[i].media = soma / MAX_NOTAS;
-
-        printf("Média do aluno %d: %.2f\n", i + 1, alunos[i].media);
     }
-
 }
 
 void atualizarNotas(struct Aluno alunos[], int numAlunos) {
@@ -63,10 +60,18 @@ void atualizarNotas(struct Aluno alunos[], int numAlunos) {
             soma += alunos[indice].notas[j];
         }
         alunos[indice].media = soma / MAX_NOTAS;
-
-        printf("Nova média do aluno %d: %.2f\n", indice + 1, alunos[indice].media);
     } else {
         printf("Aluno com matrícula %d não encontrado.\n", matricula);
+    }
+}
+
+void exibirMatriz(struct Aluno alunos[], int numAlunos) {
+    printf("\nMatriz de Notas:\n");
+    printf("Matricula\tNota 1\tNota 2\tNota 3\tMédia\n");
+    
+    for (int i = 0; i < numAlunos; i++) {
+        printf("%d\t\t%.2f\t%.2f\t%.2f\t%.2f\n", alunos[i].matricula,
+               alunos[i].notas[0], alunos[i].notas[1], alunos[i].notas[2], alunos[i].media);
     }
 }
 
@@ -82,6 +87,7 @@ int main() {
         printf("1. Digitação de notas\n");
         printf("2. Atualização de Notas\n");
         printf("3. Sair\n");
+        printf("4. Exibir Matriz\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
 
@@ -94,6 +100,9 @@ int main() {
                 break;
             case 3:
                 printf("Saindo do programa.\n");
+                break;
+            case 4:
+                exibirMatriz(alunos, numAlunos);
                 break;
             default:
                 printf("Opção inválida. Tente novamente.\n");
