@@ -35,6 +35,7 @@ void digitarNotas(struct Aluno alunos[], int numAlunos) {
 
         printf("Média do aluno %d: %.2f\n", i + 1, alunos[i].media);
     }
+
 }
 
 void atualizarNotas(struct Aluno alunos[], int numAlunos) {
