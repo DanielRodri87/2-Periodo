@@ -5,7 +5,8 @@ char palavra[50], nova_palavra[50], boolean = 0;
 
 void palindromo(char *palavra)
 {
-    for (int j = 0, i = strlen(palavra); i >= 0; i--, j++)
+    int j, i;
+    for (j = 0, i = strlen(palavra)-1; i >= 0; i--, j++)
     {
         nova_palavra[j] = palavra[i];
     }
@@ -17,6 +18,7 @@ void palindromo(char *palavra)
 }
 
 int main()
+
 {
     printf("Digite uma palavra para verficar se é palindromo: ");
     scanf("%s", palavra);
@@ -27,7 +29,7 @@ int main()
         printf("A palavra é um palindromo!");
     } else
     {
-        printf("A palavra não é um palindromo | %s |", nova_palavra);
+        printf("A palavra não é um palindromo");
     }
     return 0;
 }
