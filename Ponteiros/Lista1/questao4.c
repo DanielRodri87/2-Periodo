@@ -1,20 +1,17 @@
 #include <stdio.h>
 
+// 4.	Escreva um programa em C que inverta a ordem dos elementos de um array utilizando ponteiros.
 int tam, i, saida;
 
-int maior_elemento(int *vet, int tam)
+void inverter(int *vet, int tam)
 {
     int maior = *vet;  
-    for (int i = 1; i < tam; i++)
-    {
-        if (maior < *(vet + i))
-        {
-            maior = *(vet + i);
-        }
-    }
-    return maior;
-}
+    for (int i = 1, j = tam; i < tam; i++, j--)
+    {   
 
+        
+    }
+}
 int main()
 {
     printf("Digite o tamanho do vetor: ");
@@ -28,8 +25,7 @@ int main()
         scanf("%d", &vetor[i]);
     }
 
-    saida = maior_elemento(vetor, tam);
-    printf("O maior elemento é: %d\n", saida);
+    
 
     return 0;
 }
