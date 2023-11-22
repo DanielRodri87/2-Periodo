@@ -26,6 +26,7 @@ int main()
     char_repete(&letra, palavra);
 
     return 0;
+    
 }
 
 

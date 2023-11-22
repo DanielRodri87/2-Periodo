@@ -31,5 +31,6 @@ int main()
     {
         printf("A palavra não é um palindromo");
     }
+    
     return 0;
 }
