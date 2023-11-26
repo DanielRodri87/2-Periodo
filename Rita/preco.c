@@ -104,7 +104,7 @@ float op3(float pr){
         } 
         return parcela;
         break;
-    
+
     default:
         break;
     }
@@ -133,6 +133,7 @@ int main(){
         saida = op3(valortotal);
         printf("%f", saida);
         break;
+        
     default:
         break;
     }

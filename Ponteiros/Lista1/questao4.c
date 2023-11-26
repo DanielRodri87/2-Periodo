@@ -7,9 +7,10 @@ void inverter(int *vet, int tam)
 
     while (inicio < fim)
     {
-        int temp = *inicio;
+        // Depois peça ao GPT para explicar essa coisa, ficou muito dificil
+        int temp = *inicio; 
         *inicio = *fim;
-        *fim = temp;
+        *fim = temp;   
 
         inicio++;
         fim--;
@@ -38,8 +39,6 @@ int main()
     {
         printf("%d ", vetor[i]);
     }
-
-    
 
     return 0;
 }
