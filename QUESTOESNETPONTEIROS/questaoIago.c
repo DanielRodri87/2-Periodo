@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int **multiplica_matrizes(int **matriz1, int **matriz2, int linhas1, int colunas1, int linhas2, int colunas2)
 {
@@ -65,6 +66,7 @@ int main()
             scanf("%d", &matriz2[i][j]);
         }
     }
+
     int **matriz_resultante = multiplica_matrizes(matriz1, matriz2, linhas1, colunas1, linhas2, colunas2);
     printf("Matriz resultante:\n");
     for (int i = 0; i < linhas1; i++)
