@@ -1,26 +1,47 @@
-// Desenvolva um programa que verifique se uma matriz quadrada de ordem n é diagonalmente
-// dominante. Utilize ponteiros para percorrer os elementos e implemente uma função que realize
-// essa verificação. 
-
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
-{
-    int tam, l, c;
-    printf("Informe o tamanho das linhas e colunas da matriz: ");
-    scanf("%d", &tam);
+int verificaDiagonalDominante(int matriz[100][100], int n) {
+    for (int i = 0; i < n; i++) {
+        int somaLinha = 0;
+        int elementoDiagonal = matriz[i][i];
 
-    int matriz[tam][tam];
+        for (int j = 0; j < n; j++) {
+            if (i != j) {
+                somaLinha += abs(matriz[i][j]); 
+            }
+        }
 
-    for (l = 0; l < tam; l++)
-    {
-        for (c = 0; c < tam; c++)
-        {
-            printf("Informe matriz[%d][%d]: ", l+1, c+1);
-            scanf("%d", &matriz[l][c]);
+        if (abs(elementoDiagonal) <= somaLinha) {
+            return 0;  
         }
     }
-    
+
+    return 1; 
+}
+
+int main() {
+    int n;
+
+    printf("Digite a ordem da matriz quadrada: ");
+    scanf("%d", &n);
+
+    int matriz[n][n];
+
+    printf("Digite os elementos da matriz:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("Elemento (%d, %d): ", i + 1, j + 1);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Verifica se a matriz é diagonalmente dominante
+    if (verificaDiagonalDominante(matriz, n)) {
+        printf("A matriz é diagonalmente dominante.\n");
+    } else {
+        printf("A matriz não é diagonalmente dominante.\n");
+    }
 
     return 0;
 }
