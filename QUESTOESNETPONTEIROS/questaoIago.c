@@ -19,6 +19,7 @@ int **multiplica_matrizes(int **matriz1, int **matriz2, int linhas1, int colunas
             }
         }
     }
+
     return matriz_resultante;
 }
 

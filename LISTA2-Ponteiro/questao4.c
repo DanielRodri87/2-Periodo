@@ -12,7 +12,7 @@ int verificaDiagonalDominante(int matriz[100][100], int n) {
             }
         }
 
-        if (abs(elementoDiagonal) <= somaLinha) {
+        if (abs(elementoDiagonal) <= somaLinha) { // abs() retorna o valor absoluto de um número
             return 0;  
         }
     }
@@ -36,7 +36,6 @@ int main() {
         }
     }
 
-    // Verifica se a matriz é diagonalmente dominante
     if (verificaDiagonalDominante(matriz, n)) {
         printf("A matriz é diagonalmente dominante.\n");
     } else {

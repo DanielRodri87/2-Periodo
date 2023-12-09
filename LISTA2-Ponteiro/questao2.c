@@ -30,15 +30,36 @@ void remover_elemento(int matriz[][100], int *maxL, int *maxC)
 {
     if (*maxL > 0 && *maxC > 0)
     {
-        (*maxC)--;
+        int elementoRemover;
+        printf("Digite o elemento a ser removido: ");
+        scanf("%d", &elementoRemover);
 
-        if (*maxC == 0)
+        for (int l = 0; l < *maxL; l++)
         {
-            (*maxL)--;
-            *maxC = 100;
+            for (int c = 0; c < *maxC; c++)
+            {
+                if (matriz[l][c] == elementoRemover)
+                {
+                    matriz[l][c] = 0; // Marcar como removido (pode ser ajustado conforme necessário)
+                    printf("Elemento removido com sucesso!\n");
+                    break;
+                }
+            }
         }
 
-        printf("Elemento removido com sucesso!\n");
+        // Mostrar a nova lista após remoção
+        printf("Lista após alteração: ");
+        for (int l = 0; l < *maxL; l++)
+        {
+            for (int c = 0; c < *maxC; c++)
+            {
+                if (matriz[l][c] != 0)
+                {
+                    printf("%d ", matriz[l][c]);
+                }
+            }
+        }
+        printf("\n");
     }
     else
     {
@@ -67,7 +88,6 @@ void pesquisar_elemento(int matriz[][100], int *maxL, int *maxC)
     printf("Elemento não encontrado.\n");
 }
 
-
 int main()
 {
     int maxL = 0, maxC = 0, menu, l, c;
@@ -92,21 +112,11 @@ int main()
     {
     case 1:
         adicionar_elemento(matriz, &maxL, &maxC);
-        printf("Lista após alteração: ");
-        for (l = 0; l < maxL; l++)
-        {
-            for (c = 0; c < maxC; c++)
-            {
-                printf("%d ", &matriz[l][c]);
-            }
-        }
-
         break;
 
     case 2:
         remover_elemento(matriz, &maxL, &maxC);
         break;
-
 
     case 3:
         pesquisar_elemento(matriz, &maxL, &maxC);
