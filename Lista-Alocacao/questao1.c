@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include <time.h>
 
+
+
+void entrada(int n)
+{
+    printf("Digite quantos valores você deseja armazenar: ");
+    scanf("%d", &n);
+
+    if (n < 10)
+    {
+        printf("O número de valores deve ser maior ou igual a 10\n");
+        exit(1);
+    }
+
+}
+
 void preencheVetor(int *vetor, int tamanho)
 {
     for (int i = 0; i < tamanho; i++)
@@ -12,17 +27,10 @@ void preencheVetor(int *vetor, int tamanho)
 
 int main()
 {
-    int n;
-    printf("Digite quantos valores você deseja armazenar: ");
-    scanf("%d", &n);
-
-    if (n < 10)
-    {
-        printf("O número de valores deve ser maior ou igual a 10\n");
-        return 0;
-    }
-    int *vetor = (int *)malloc(n * sizeof(int));
-    preencheVetor(vetor, n);
+    int num;
+    entrada(num);
+    int *vetor = (int *)malloc(num * sizeof(int));
+    preencheVetor(vetor, num);
 
     for (int i = 0; i < 10; i++)
     {
