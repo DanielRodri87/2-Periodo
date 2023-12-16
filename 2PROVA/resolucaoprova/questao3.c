@@ -76,3 +76,4 @@ int somaDiagonalSecundaria(int **matriz, int l, int c)
     return soma;
 }
 
+
