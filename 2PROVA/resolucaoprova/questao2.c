@@ -39,6 +39,7 @@ int main()
 
     free(vetor1);
     free(vetor2);
+    
 
     return 0;
 }
