@@ -34,6 +34,8 @@ int main()
     printf("Exibindo lista após exclusão: ");
     exibirItens(vetor, qtd);
 
+    free(vetor);
+
     return 0;
 }
 
