@@ -8,7 +8,7 @@ void crescente(int *vetor)
     {
         for (j = i + 1; j < 10; j++)
         {
-            if (vetor[i] > vetor[j])
+            if (vetor[i] < vetor[j])
             {
                 aux = vetor[i];
                 vetor[i] = vetor[j];

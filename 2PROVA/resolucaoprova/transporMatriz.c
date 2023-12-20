@@ -50,7 +50,7 @@ void transporMatriz(int **matriz, int tam)
 {
     int temp;
     for (int i = 0; i < tam; i++) {
-        for (int j = i + 1; j < tam; j++) {
+        for (int j = i+1; j < tam; j++) {
             temp = matriz[i][j];
             matriz[i][j] = matriz[j][i];
             matriz[j][i] = temp;
