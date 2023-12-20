@@ -17,9 +17,7 @@ int main()
     {
         matriz = (int **) calloc(linhas, sizeof(int *));
         for (int i = 0; i < linhas; i++)
-        {
             matriz[i] = (int *) calloc(colunas, sizeof(int));
-        }
 
         for(int i = 0; i < linhas; i++)
         {
