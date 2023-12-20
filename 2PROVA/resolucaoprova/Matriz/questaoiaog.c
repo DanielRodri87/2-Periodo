@@ -45,10 +45,12 @@ int adicionarItem(int *vet, int tam)
     printf("O vetor tem %d posicões\nDeseja alterar? 1- Sim 2- Não: ", tam);
     scanf("%d", &opcao);
     if (opcao == 1)
+    {
         printf("Informe o novo tamanho: ");
         scanf("%d", &novoTam);
         vet = (int *) realloc(vet, tam * sizeof(int));
         tam = novoTam;
+    }
 
     for (int i = 0; i < tam; i++)
     {
@@ -89,10 +91,6 @@ void exibirItens(int *vet, int tam)
 {
     int i;
     for(i = 0; i < tam; i++)
-    {
-        if (vet[i] != 'f')
-        {
-            printf("%d ", vet[i]);
-        }
-    }
+        printf("%d ", vet[i]);
+  
 }
