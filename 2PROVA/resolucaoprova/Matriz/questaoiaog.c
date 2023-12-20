@@ -5,30 +5,94 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int adicionarItem(int *vet, int tam);
+void pesquisarItem(int *vet, int tam);
+void deletarItem(int *vet, int tam);
+void exibirItens(int *vet, int tam);
+
 int main()
 {
-    int menu;
-    printf("1 - Adicionar\n2 - Remover\n3 - Pesquisar\n4 - Sair\n: -> ");
-    scanf("%d", &menu);
+    int menu, qtd;
 
-    switch (menu)
-    {
-    case 1:
-        printf("Tela de adicionar\n");
-        break;
-    case 2:
-        printf("Tela de remover\n");
-        break;
-    case 3:
-        printf("Tela de pesquisar\n");
-        break;
-    case 4:
-        exit(1);
-        break;
-    default:
+    printf("Informe a quantidade inicial de itens no vetor: ");
+    scanf("%d", &qtd);
+    int *vetor = (int *) malloc(qtd * sizeof(int));
 
-        break;
-    }
+
+    printf("\nTela de adicionar\n");
+    qtd = adicionarItem(vetor, qtd);
+
+    printf("\nTela de pesquisar\n");
+    pesquisarItem(vetor, qtd);
+
+    printf("Exibindo lista antes exclusão: ");
+    exibirItens(vetor, qtd);
+
+    printf("\nTela de deletar\n");
+    deletarItem(vetor, qtd);
+
+    printf("Exibindo lista após exclusão: ");
+    exibirItens(vetor, qtd);
 
     return 0;
+}
+
+int adicionarItem(int *vet, int tam)
+{
+    int opcao;
+
+    int novoTam;
+    printf("O vetor tem %d posicões\nDeseja alterar? 1- Sim 2- Não: ", tam);
+    scanf("%d", &opcao);
+    if (opcao == 1)
+        printf("Informe o novo tamanho: ");
+        scanf("%d", &novoTam);
+        vet = (int *) realloc(vet, tam * sizeof(int));
+        tam = novoTam;
+
+    for (int i = 0; i < tam; i++)
+    {
+        printf("Informe o valor da posição %d: ", i+1);
+        scanf("%d", &vet[i]);
+    }
+
+    return tam;
+
+}
+
+void pesquisarItem(int *vet, int tam)
+{
+    int search, i;
+    printf("Informe o valor que você deseja pesquisar: ");
+    scanf("%d", &search);
+    for(i = 0; i < tam; i++)
+    {
+        if (vet[i] == search)
+            printf("O item %d, está na posição %d\n", vet[i], i);
+    }
+}
+
+void deletarItem(int *vet, int tam)
+{
+    int search, i;
+    printf("Informe o valor que você deseja remover: ");
+    scanf("%d", &search);
+    for(i = 0; i < tam; i++)
+    {
+        if (vet[i] == search)
+            vet[i] = (char)'f';
+    }
+
+}
+
+void exibirItens(int *vet, int tam)
+{
+    int i;
+    for(i = 0; i < tam; i++)
+    {
+        if (vet[i] != 'f')
+        {
+            printf("%d ", vet[i]);
+        }
+    }
 }
