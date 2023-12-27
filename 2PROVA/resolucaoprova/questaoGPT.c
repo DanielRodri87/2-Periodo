@@ -24,3 +24,4 @@ void trocarNumeros(int *num1, int *num2)
     *num2 = aux;
 
 }
+
